@@ -1,0 +1,270 @@
+{
+    "books": [
+        {
+            "isbn": "9780198503354",
+            "title": "Foundations of Spectroscopy",
+            "contributors": [
+                "Simon Duckett, Bruce Gilbert"
+            ],
+            "series": "Oxford Chemistry Primer",
+            "toc": [
+                {
+                    "file": "epub/html/toc.html",
+                    "title": "Table of Contents"
+                },
+                {
+                    "file": "epub/html/copyright.html",
+                    "first": 0,
+                    "length": 1,
+                    "title": "Copyright"
+                },
+                {
+                    "file": "epub/html/chapter_1.html",
+                    "first": 1,
+                    "length": 18,
+                    "title": "Mass spectrometry"
+                },
+                {
+                    "file": "epub/html/chapter_2.html",
+                    "first": 19,
+                    "length": 4,
+                    "title": "2 Introduction to spectroscopic techniques"
+                },
+                {
+                    "file": "epub/html/chapter_3.html",
+                    "first": 23,
+                    "length": 20,
+                    "title": "3 Infra-red spectroscopy"
+                },
+                {
+                    "file": "epub/html/chapter_4.html",
+                    "first": 43,
+                    "length": 11,
+                    "title": "4 Electronic (ultraviolet-visible) absorption spectroscopy"
+                },
+                {
+                    "file": "epub/html/chapter_5.html",
+                    "first": 54,
+                    "length": 22,
+                    "title": "5 Nuclear magnetic resonance spectroscopy"
+                },
+                {
+                    "file": "epub/html/chapter_6.html",
+                    "first": 76,
+                    "length": 13,
+                    "title": "6 X-ray diffraction"
+                },
+                {
+                    "file": "epub/html/index.html",
+                    "first": 89,
+                    "length": 2,
+                    "title": "Index"
+                },
+                {
+                    "file": "epub/html/figures.html",
+                    "title": "Figures"
+                },
+                {
+                    "file": "epub/html/foreword.html",
+                    "title": "Foreword"
+                },
+                {
+                    "file": "epub/html/preface.html",
+                    "title": "Preface"
+                },
+                {
+                    "file": "epub/html/tables.html",
+                    "title": "Tables"
+                }
+            ],
+            "ordinal": 78,
+            "publisher": "Oxford University Press",
+            "pathTo": {
+                "toc": "epub/html/toc.html",
+                "index": "epub/html/index.html"
+            },
+            "flags": {
+                "pages": true
+            },
+            "copyright": "Oxford University Press",
+            "CatalogId": "oupchemistry"
+          },
+          {
+            "isbn": "9780198503606",
+            "title": "Foundations of Physics for Chemists",
+            "contributors": [
+                "G. A. D. Ritchie",
+                "D. S. Sivia"
+            ],
+            "series": "Oxford Chemistry Primer",
+            "toc": [
+                {
+                    "file": "epub/html/toc.html",
+                    "title": "Table of Contents"
+                },
+                {
+                    "file": "epub/html/copyright.html",
+                    "first": 0,
+                    "length": 1,
+                    "title": "Copyright"
+                },
+                {
+                    "file": "epub/html/chapter_1.html",
+                    "first": 1,
+                    "length": 18,
+                    "title": "1 Classical mechanics"
+                },
+                {
+                    "file": "epub/html/chapter_2.html",
+                    "first": 19,
+                    "length": 11,
+                    "title": "2 Waves and vibrations"
+                },
+                {
+                    "file": "epub/html/chapter_3.html",
+                    "first": 30,
+                    "length": 12,
+                    "title": "3 Quantum mechanics"
+                },
+                {
+                    "file": "epub/html/chapter_4.html",
+                    "first": 42,
+                    "length": 11,
+                    "title": "4 Kinetic theory of gases"
+                },
+                {
+                    "file": "epub/html/chapter_5.html",
+                    "first": 53,
+                    "length": 8,
+                    "title": "5 Electrostatics"
+                },
+                {
+                    "file": "epub/html/chapter_6.html",
+                    "first": 61,
+                    "length": 13,
+                    "title": "6 Electromagnetism"
+                },
+                {
+                    "file": "epub/html/chapter_7.html",
+                    "first": 74,
+                    "length": 14,
+                    "title": "7 Optics"
+                },
+                {
+                    "file": "epub/html/appendix.html",
+                    "first": 88,
+                    "length": 2,
+                    "title": "Answers"
+                },
+                {
+                    "file": "epub/html/index.html",
+                    "first": 90,
+                    "length": 3,
+                    "title": "Index"
+                },
+                {
+                    "file": "epub/html/foreword.html",
+                    "title": "Foreword"
+                },
+                {
+                    "file": "epub/html/preface.html",
+                    "title": "Preface"
+                },
+                {
+                    "file": "epub/html/tables.html",
+                    "title": "Tables"
+                }
+            ],
+            "ordinal": 93,
+            "publisher": "Oxford University Press",
+            "pathTo": {
+                "toc": "epub/html/toc.html",
+                "index": "epub/html/index.html"
+            },
+            "flags": {
+                "pages": true
+            },
+            "copyright": "Oxford University Press",
+            "CatalogId": "oupchemistry"
+        },
+        {
+            "isbn": "9780198503712",
+            "title": "Sonochemistry",
+            "contributors": [
+                "Timothy J. Mason"
+            ],
+            "series": "Oxford Chemistry Primer",
+            "toc": [
+                {
+                    "file": "epub/html/toc.html",
+                    "title": "Table of Contents"
+                },
+                {
+                    "file": "epub/html/copyright.html",
+                    "first": 0,
+                    "length": 1,
+                    "title": "Copyright"
+                },
+                {
+                    "file": "epub/html/chapter_1.html",
+                    "first": 1,
+                    "length": 41,
+                    "title": "1 An introduction to the uses of power ultrasound in chemistry"
+                },
+                {
+                    "file": "epub/html/chapter_2.html",
+                    "first": 42,
+                    "length": 15,
+                    "title": "2 The ultrasonic cleaning bath"
+                },
+                {
+                    "file": "epub/html/chapter_3.html",
+                    "first": 57,
+                    "length": 16,
+                    "title": "3 The ultrasonic probe"
+                },
+                {
+                    "file": "epub/html/chapter_4.html",
+                    "first": 73,
+                    "length": 20,
+                    "title": "4 Flow systems and scale-up in sonochemistry"
+                },
+                {
+                    "file": "epub/html/figures.html",
+                    "title": "Figures"
+                },
+                {
+                    "file": "epub/html/foreword.html",
+                    "title": "Foreword"
+                },
+                {
+                    "file": "epub/html/index.html",
+                    "title": "Index"
+                },
+                {
+                    "file": "epub/html/preface.html",
+                    "title": "Preface"
+                },
+                {
+                    "file": "epub/html/schemes.html",
+                    "title": "Schemes"
+                },
+                {
+                    "file": "epub/html/tables.html",
+                    "title": "Tables"
+                }
+            ],
+            "ordinal": 70,
+            "publisher": "Oxford University Press",
+            "pathTo": {
+                "toc": "epub/html/toc.html",
+                "index": "epub/html/index.html"
+            },
+            "flags": {
+                "pages": true
+            },
+            "copyright": "Oxford University Press",
+            "CatalogId": "oupchemistry"
+        }
+    ]
+}
