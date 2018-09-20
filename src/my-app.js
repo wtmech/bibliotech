@@ -33,6 +33,7 @@ setPassiveTouchGestures(true);
 setRootPath(MyAppGlobals.rootPath);
 
 class MyApp extends PolymerElement {
+
   static get template() {
     return html`
       <style>
@@ -81,14 +82,17 @@ class MyApp extends PolymerElement {
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
               <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
-                <a href="[[rootPath]]booklist"><iron-image name="booklist" class="logo" src="https://d1re4mvb3lawey.cloudfront.net/images/logo-short.svg"></iron-image></a>
+                <iron-image name="booklist" class="logo" src="https://d1re4mvb3lawey.cloudfront.net/images/logo-short.svg"></iron-image>
             </app-toolbar>
           </app-header>
-
+          <iron-ajax
+            auto
+            url="../data/data.json"
+            handle-as="json"
+            last-response="{{books}}">
+          </iron-ajax>
           <iron-pages selected="[[page]]" attr-for-selected="name" role="main">
-            <my-view1 name="view1"></my-view1>
-            <book-list name="booklist"></book-list>
-            <detail-view name="detail"></detail-view>
+            <book-list name="booklist" books={{books}} isbn=[[books.books.isbn]]></book-list>
             <my-view404 name="view404"></my-view404>
           </iron-pages>
         </app-header-layout>
@@ -121,7 +125,7 @@ class MyApp extends PolymerElement {
      // Show 'view1' in that case. And if the page doesn't exist, show 'view404'.
     if (!page) {
       this.page = 'booklist';
-    } else if (['booklist', 'detail', 'view3'].indexOf(page) !== -1) {
+    } else if (['booklist'].indexOf(page) !== -1) {
       this.page = page;
     } else {
       this.page = 'view404';
@@ -137,9 +141,6 @@ class MyApp extends PolymerElement {
     switch (page) {
       case 'booklist':
         import('./book-list.js');
-        break;
-      case 'detail':
-        import('./detail-view.js');
         break;
       case 'view404':
         import('./my-view404.js');

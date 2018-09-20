@@ -1,6 +1,7 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-import '@polymer/iron-ajax/iron-ajax.js';
 import '@polymer/iron-image/iron-image.js';
+import '@polymer/iron-icon/iron-icon.js';
+import './detail-view';
 
 import './shared-styles.js';
 
@@ -8,7 +9,15 @@ class BookList extends PolymerElement {
 
   static get properties() {
     return {
-      isbn: String
+      isbn: String,
+      title: String,
+      publisher: String,
+      contributors: Array,
+      toc: Array,
+      hidden: {
+		    type: Boolean,
+		    value: true
+      }
     };
   }
 
@@ -23,25 +32,30 @@ class BookList extends PolymerElement {
           background: #fafafa;
         }
 
+        [hidden] {
+          display: none;
+         }
+
         .container {
           width: 80%;
-          height: 100%;
+          height: auto;
           margin: 0 auto;
           display: flex;
           justify-content: space-around;
+          over-flow: hidden;
         }
 
         .book {
           flex: 2;
-          height: 100%;
           max-width: 164px;
           display: flex;
           flex-direction: column;
           transition: transform .2s;
+          cursor: pointer;
         }
 
         .book:hover {
-          transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+          transform: scale(1.1);
       }
         
         .book-contents {
@@ -55,8 +69,8 @@ class BookList extends PolymerElement {
         }
 
         .book-cover {
-          width: 164px;
-          height: 220px;
+          width: 100%;
+          height: 100%;
           border-radius: 3px;
         }
 
@@ -93,21 +107,24 @@ class BookList extends PolymerElement {
           color: #757575;
         }
 
+        .close-icon {
+          z-index: 3;
+          width: 45px;
+          height: auto;
+        }
+
       </style>
 
-      <iron-ajax
-        auto
-        url="../data/data.json"
-        handle-as="json"
-        last-response="{{books}}">
-      </iron-ajax>
       
-      <h1>Your Titles</h1>
-      <div class="container">
-        <template is="dom-repeat" items=[[books.books]]>
-            <div class="book">
+      <template is="dom-if" if=[[hidden]]>
+        <h1>Your Titles</h1>
+      </template>
+      <template is="dom-if" if=[[hidden]]>
+        <div class="container">
+          <template is="dom-repeat" items=[[books.books]]>
+            <div class="book" on-click="show">
               <div class="book-image-container">
-                <iron-image sizing="contain" class="book-cover" src="https://d1re4mvb3lawey.cloudfront.net/{{item.isbn}}/cover.jpg"></iron-image>
+                <template is="dom-if" if="[[item.title]]"> <iron-image sizing="contain" class="book-cover" src="https://d1re4mvb3lawey.cloudfront.net/{{item.isbn}}/cover.jpg"></iron-image></template>
                 <div class="book-title">
                   <span class="title">[[item.title]]</span>
                   <template is="dom-repeat" items=[[item.contributors]]>
@@ -120,10 +137,35 @@ class BookList extends PolymerElement {
                 <template is="dom-if" if="[[item.publisher]]"><span class="bold">Publisher: <span class="value"> | [[item.publisher]]</span></template>
               </div>
             </div>
-        </template>
-        
-      </div>
+          </template>
+        </div>
+      </template>
+      <template is="dom-if" if=[[!hidden]]><paper-icon-button icon="my-icons:close" class="close-icon" on-click="close"></paper-icon-button></template>
+      <detail-view 
+        done
+        hidden="[[hidden]]"
+        title=[[title]]
+        isbn=[[isbn]]
+        publisher=[[publisher]]
+        contributors=[[contributors]]
+        toc=[[toc]]>
+      </detail-view>
     `;
+  }
+
+  show(e) {
+    e.stopPropagation();
+    this.hidden = false;
+    this.title = e.model.item.title;
+    this.isbn = e.model.item.isbn;
+    this.publisher = e.model.item.publisher;
+    this.contributors = e.model.item.contributors;
+    this.toc = e.model.item.pathTo.toc
+  }
+
+  close(e) {
+    e.stopPropagation();
+    this.hidden = true;
   }
 }
 

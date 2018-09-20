@@ -54,7 +54,18 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         width: 100%;
         height: 100%;
         border: none;
+        margin-top: 100px;
       }
+
+      a:link, a:visited {
+        text-decoration: none;
+        color: #757575;
+      }
+
+      body {
+        background: black;
+      }
+
     </style>
   </template>
 </dom-module>`;
