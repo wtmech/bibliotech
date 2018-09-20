@@ -55,6 +55,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         height: 100%;
         border: none;
         margin-top: 100px;
+        z-index: 99;
       }
 
       a:link, a:visited {

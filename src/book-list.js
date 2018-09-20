@@ -43,6 +43,7 @@ class BookList extends PolymerElement {
           display: flex;
           justify-content: space-around;
           over-flow: hidden;
+          flex-wrap: wrap;
         }
 
         .book {

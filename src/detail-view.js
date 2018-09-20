@@ -51,6 +51,7 @@ class DetailView extends PolymerElement {
           justify-content: center;
           position: absolute;
           top: 90px;
+          overflow: hidden;
         }
 
         .book-cover {
