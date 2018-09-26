@@ -119,8 +119,6 @@ class BookList extends PolymerElement {
       
       <template is="dom-if" if=[[hidden]]>
         <h1>Your Titles</h1>
-      </template>
-      <template is="dom-if" if=[[hidden]]>
         <div class="container">
           <template is="dom-repeat" items=[[books.books]]>
             <div class="book" on-click="show">
