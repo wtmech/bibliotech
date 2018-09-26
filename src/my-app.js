@@ -92,7 +92,7 @@ class MyApp extends PolymerElement {
             last-response="{{books}}">
           </iron-ajax>
           <iron-pages selected="[[page]]" attr-for-selected="name" role="main">
-            <book-list name="booklist" books={{books}} isbn=[[books.books.isbn]]></book-list>
+            <book-list name="booklist" books=[[books]] isbn=[[books.books.isbn]]></book-list>
             <my-view404 name="view404"></my-view404>
           </iron-pages>
         </app-header-layout>
